@@ -50,6 +50,59 @@ export const FeaturedSVG = '../images/gallery/imagem-capa.jpg'
 export const DefaultSVG = '../images/svg/undraw/undraw_my_feed.svg'
 export const DefaultImage = '../images/undraw/undraw_my_feed.png'
 
+export const CategoryDetail = [
+  {
+    category: 'instructions',
+    coverSVG: '../images/svg/undraw/undraw_instruction_manual.svg',
+    socialImage: '../images/undraw/undraw_instruction_manual.png',
+    description: 'Guidelines on using this starter.',
+  },
+  {
+    category: 'information',
+    coverSVG: '../images/svg/undraw/undraw_instant_information.svg',
+    socialImage: '../images/undraw/undraw_instant_information.png',
+    description: 'Information articles.',
+  },
+]
+
+export function categoryDetail(category: string | undefined) {
+  const details = CategoryDetail.filter(cat => cat.category == category)
+
+  if (details.length == 1) {
+    return details[0]
+  }
+  return {
+    category: 'General',
+    coverSVG: '../images/svg/undraw/undraw_instant_information.svg',
+    socialImage: '../images/undraw/undraw_instant_information.png',
+    description: 'Category ' + category,
+  }
+}
+export const AuthorDetail = [
+  {
+    name: 'Chris Tham',
+    description: 'Hello World',
+    contact: 'chris@christham.net',
+    image: '../images/authors/Chris Tham.jpg',
+  },
+]
+
+export const DefaultAuthor = {
+  name: 'Hello Astro',
+  image: '../images/authors/default.png',
+  contact: 'info@hellotham.com',
+  description: 'Astronaut',
+}
+
+export function authorDetail(author: string | undefined) {
+  const details = AuthorDetail.filter(person => person.name == author)
+
+  if (details.length == 1) {
+    return details[0]
+  }
+  return DefaultAuthor
+}
+
 export const NavigationLinks = [
   { name: 'Home', href: '' },
   { name: 'Serviços', href: 'about' },
