@@ -1,0 +1,76 @@
+---
+import Img from '../components/img.astro'
+import { FeaturedSVG } from '../config'
+---
+
+<div class="relative bg-white dark:bg-gray-900 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div
+      class="z-10 relative pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 bg-white dark:bg-gray-900"
+    >
+      <svg
+        class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white dark:text-gray-900 transform translate-x-1/2"
+        fill="currentColor"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <polygon points="50,0 100,0 50,100 0,100"></polygon>
+      </svg>
+      <main
+        class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 md:pt-16 lg:pt-20 lg:px-8 xl:pt-28"
+      >
+        <div class="text-center sm:text-left">
+          <h1
+            class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl text-left"
+          >
+            <span class="block xl:inline">Bem-vindo a</span>{' '}
+            <span class="block text-orange-700 dark:text-orange-300 xl:inline"
+              >ALM Energias
+            </span>
+          </h1>
+          <p
+            class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          >
+            A ALM Energias é uma empresa criada com o objetivo de tornar nosso
+            mundo mais sustentável. Através de nossas instalações, trazemos à
+            você a possibilidade de produção de sua própria energia, em sua
+            própria casa.
+          </p>
+          <p
+            class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          >
+            Com nossa equipe altamente treinada, queremos dar a você a melhor
+            expêriencia de energia limpa possível.
+          </p>
+          <p
+            class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          >
+            Conte também com nossos serviços de manutenção e limpeza de nossos
+            equipamentos, e demais manutenções elétricas necessárias em sua
+            residência.
+          </p>
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow">
+              <a
+                href="/about"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-600 dark:text-black dark:bg-orange-300 dark:hover:bg-orange-300 md:py-4 md:text-lg md:px-10"
+              >
+                Nosso Serviços
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div
+    class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-orange-100 dark:bg-orange-500"
+  >
+    <Img
+      class="h-56 w-full object-cover bg-cover bg-orange-600/30 backdrop-brightness-75 sm:h-72 md:h-96 lg:w-full lg:h-full"
+      src={FeaturedSVG}
+      alt="featured"
+    />
+  </div>
+</div>
